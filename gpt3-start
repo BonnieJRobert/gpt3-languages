@@ -1,0 +1,14 @@
+library(rgpt3)
+gpt3_authenticate("./access_key.txt")
+gpt3_test_completion()
+response_default<- gpt3_single_completion(
+    prompt_input = "Create a SQL request to find all users who live in California and have over 1000 credits:", 
+    model = "code-davinci-002")
+response_d2 <- gpt3_single_completion(
+    prompt_input = "Create a SQL request to find all users who live in California and have over 1000 credits:", 
+    model = "code-davinci-002")
+response_c1 <- gpt3_single_completion(
+    prompt_input = "Create a SQL request to find all users who live in California and have over 1000 credits:", 
+    model = "code-cushman-001")
+
+rm(api_key)
